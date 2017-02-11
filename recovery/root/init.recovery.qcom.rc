@@ -1,4 +1,3 @@
-# encryption support
 on init
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
@@ -15,7 +14,6 @@ service qseecomd /sbin/qseecomd
     group root
     seclabel u:r:recovery:s0
 
-# use decryption libraries from /system if available
 service setup-decrypt /sbin/setup_decrypt
     oneshot
     disabled
@@ -27,7 +25,6 @@ on property:ro.crypto.state=encrypted
     start qseecomd
 
 on boot
-    # save battery by switching to interactive once booted
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
