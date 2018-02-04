@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := zl1
+PRODUCT_RELEASE_NAME := tetris
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -13,8 +13,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.device ro.product.model
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := zl1
-PRODUCT_MODEL := X720
-PRODUCT_NAME := omni_zl1
-PRODUCT_BRAND := LeEco
-PRODUCT_MANUFACTURER := LeMobile
+PRODUCT_DEVICE := tetris
+PRODUCT_MODEL := tetris
+PRODUCT_NAME := omni_tetris
+PRODUCT_BRAND := Sega
+PRODUCT_MANUFACTURER := Sega
